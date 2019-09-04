@@ -22,6 +22,18 @@ public class Calculator {
   }
 
   private double discountFor(double price) {
+    if (price > 50000) {
+      return 1 - 0.15;
+    }
+    if (price > 10000) {
+      return 1 - 0.10;
+    }
+    if (price > 7000) {
+      return 1 - 0.07;
+    }
+    if (price > 5000) {
+      return 1 - 0.05;
+    }
     if (price > 1000) {
       return 1 - 0.03;
     }
