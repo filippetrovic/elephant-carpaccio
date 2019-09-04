@@ -9,11 +9,12 @@ public class Main {
   public static void main(String[] args) throws IOException {
     final Calculator calculator = new Calculator();
 
-    BufferedReader reader =
-        new BufferedReader(new InputStreamReader(System.in));
-    String input = reader.readLine();
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-    final String output = calculator.calculate(input, null);
+    String amount = reader.readLine();
+    String price = reader.readLine();
+
+    final String output = calculator.calculate(amount, price);
 
     System.out.println(output);
 
