@@ -9,7 +9,7 @@ public class CalculatorTest {
   private Calculator calculator = new Calculator();
 
   @Test
-  public void shouldMultiplyAmountAndPrice() {
+  public void shouldMultiplyAmountAndPriceAndAddTax() {
     // Given
     String amount = "5";
     String price = "1.2";
@@ -19,7 +19,7 @@ public class CalculatorTest {
 
     // Then
     assertThat(output)
-        .isEqualTo("$6.00");
+        .isEqualTo("$6.41");
 
   }
 }
