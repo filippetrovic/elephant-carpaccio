@@ -13,8 +13,9 @@ public class Main {
 
     String amount = reader.readLine();
     String price = reader.readLine();
+    String tax = reader.readLine();
 
-    final String output = calculator.calculate(amount, price);
+    final String output = calculator.calculate(amount, price, tax);
 
     System.out.println(output);
 

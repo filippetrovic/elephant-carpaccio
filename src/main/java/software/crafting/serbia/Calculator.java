@@ -4,14 +4,21 @@ public class Calculator {
 
   private static final double UTAH_TAX_RATE = 1.0685;
 
-  public String calculate(String amountString, String priceString) {
+  public String calculate(String amountString, String priceString, String tax) {
     final int amount = Integer.parseInt(amountString);
     final double price = Double.parseDouble(priceString);
 
     final double totalPrice = amount * price;
-    final double finalPrice = totalPrice * discountFor(totalPrice) * UTAH_TAX_RATE;
+    final double finalPrice = totalPrice * discountFor(totalPrice) * taxFor(tax);
 
     return String.format("$%.2f", finalPrice);
+  }
+
+  private double taxFor(String tax) {
+    if (tax != null && !tax.isBlank()) {
+      return 1 + Double.parseDouble(tax) / 100;
+    }
+    return UTAH_TAX_RATE;
   }
 
   private double discountFor(double price) {
