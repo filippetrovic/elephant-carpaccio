@@ -9,16 +9,17 @@ public class CalculatorTest {
   private Calculator calculator = new Calculator();
 
   @Test
-  public void shouldFail() {
+  public void shouldMultiplyAmountAndPrice() {
     // Given
-    String input = "5";
+    String amount = "5";
+    String price = "1.2";
 
     // When
-    String output = calculator.calculate(input);
+    String output = calculator.calculate(amount, price);
 
     // Then
     assertThat(output)
-        .isEqualTo("5");
+        .isEqualTo("$6.00");
 
   }
 }

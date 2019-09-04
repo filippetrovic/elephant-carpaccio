@@ -13,7 +13,7 @@ public class Main {
         new BufferedReader(new InputStreamReader(System.in));
     String input = reader.readLine();
 
-    final String output = calculator.calculate(input);
+    final String output = calculator.calculate(input, null);
 
     System.out.println(output);
 
