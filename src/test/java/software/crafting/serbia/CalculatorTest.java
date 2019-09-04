@@ -22,4 +22,20 @@ public class CalculatorTest {
         .isEqualTo("$6.41");
 
   }
+
+  @Test
+  public void shouldMultiplyAmountAndPriceAndIncludeDiscountAndAddTax() {
+    // Given
+    String amount = "5";
+    String price = "201";
+
+    // When
+    String output = calculator.calculate(amount, price);
+
+    // Then
+    assertThat(output)
+        .isEqualTo("$1041.63");
+
+  }
+
 }
